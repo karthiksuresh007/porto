@@ -346,7 +346,7 @@ textarea {
 .hero-grid {
   display: grid;
   grid-template-columns: minmax(0, 0.95fr) minmax(520px, 1.05fr);
-  gap: 2rem;
+  gap: 1.3rem;
   align-items: center;
   transition: transform 0.2s ease;
 }
@@ -575,20 +575,20 @@ textarea {
 
 .hero-visual {
   position: relative;
-  min-height: 720px;
+  min-height: 650px;
   display: grid;
   place-items: center;
   align-content: center;
-  gap: 1.2rem;
+  gap: 0.85rem;
   transition: transform 0.2s ease;
 }
 
 .photo-frame {
   position: relative;
-  width: min(560px, 100%);
+  width: min(500px, 100%);
   aspect-ratio: 0.84;
-  padding: 18px;
-  border-radius: 46px;
+  padding: 16px;
+  border-radius: 42px;
   background:
     linear-gradient(135deg, rgba(124, 58, 237, 0.55), rgba(6, 182, 212, 0.3)) border-box,
     rgba(255, 255, 255, 0.02) padding-box;
@@ -622,7 +622,7 @@ textarea {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 36px;
+  border-radius: 30px;
   background: linear-gradient(180deg, rgba(17, 17, 28, 0.94), rgba(8, 8, 14, 0.98));
 }
 
@@ -636,75 +636,33 @@ textarea {
   color: var(--text);
 }
 
-.hero-tag-orbit {
-  position: relative;
+.hero-tag-track {
   width: min(420px, 100%);
-  height: 170px;
-  display: grid;
-  place-items: center;
-  animation: orbitSpin 16s linear infinite;
-}
-
-.orbit-core {
-  width: 104px;
-  height: 104px;
-  border-radius: 50%;
-  border: 1px dashed rgba(148, 163, 184, 0.14);
-  background: radial-gradient(circle, rgba(124, 58, 237, 0.16), rgba(6, 182, 212, 0.06));
-  box-shadow: inset 0 0 26px rgba(6, 182, 212, 0.12);
-}
-
-.orbit-core::before {
-  content: "";
-  position: absolute;
-  inset: 50%;
-  width: 100%;
-  height: 100%;
-  max-width: 240px;
-  max-height: 240px;
-  border-radius: 50%;
-  border: 1px solid rgba(148, 163, 184, 0.08);
-  transform: translate(-50%, -50%);
-}
-
-.hero-tag {
-  position: absolute;
-  z-index: 2;
-  padding: 0.68rem 1rem;
+  padding: 0.75rem;
   border-radius: 999px;
-  background: rgba(10, 10, 15, 0.8);
-  border: 1px solid rgba(148, 163, 184, 0.12);
-  backdrop-filter: blur(12px);
-  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.24);
+  overflow: hidden;
+  background: rgba(12, 12, 19, 0.42);
+}
+
+.hero-tag-rail {
+  display: flex;
+  gap: 0.75rem;
+  width: max-content;
+  animation: heroTagSlide 14s linear infinite;
+}
+
+.hero-pill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(148, 163, 184, 0.1);
   font-family: "JetBrains Mono", monospace;
-  font-size: 0.84rem;
+  font-size: 0.8rem;
   color: var(--text);
   white-space: nowrap;
-  animation: orbitCounterSpin 16s linear infinite;
-}
-
-.tag-react {
-  top: 6%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.tag-node {
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-}
-
-.tag-creator {
-  bottom: 6%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.tag-reach {
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
 }
 
 .halo {
@@ -717,15 +675,15 @@ textarea {
   width: 180px;
   height: 180px;
   background: rgba(124, 58, 237, 0.28);
-  top: 12%;
+  top: 10%;
   right: 8%;
 }
 
 .halo-two {
-  width: 240px;
-  height: 240px;
+  width: 210px;
+  height: 210px;
   background: rgba(6, 182, 212, 0.2);
-  bottom: 20%;
+  bottom: 18%;
   left: 6%;
 }
 
@@ -1620,21 +1578,12 @@ td {
   }
 }
 
-@keyframes orbitSpin {
+@keyframes heroTagSlide {
   from {
-    transform: rotate(0deg);
+    transform: translateX(0);
   }
   to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes orbitCounterSpin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(-360deg);
+    transform: translateX(-50%);
   }
 }
 
@@ -1781,9 +1730,8 @@ td {
     flex-basis: 100%;
   }
 
-  .hero-tag-orbit {
+  .hero-tag-track {
     width: min(360px, 100%);
-    height: 150px;
   }
 }
 
@@ -1811,6 +1759,16 @@ td {
 
   .photo-frame {
     border-radius: 28px;
+  }
+
+  .hero-tag-track {
+    width: 100%;
+    padding: 0.7rem;
+  }
+
+  .hero-tag-rail {
+    gap: 0.6rem;
+    animation-duration: 16s;
   }
 
   .social-motion-band {
@@ -1955,26 +1913,10 @@ td {
     padding: 12px;
   }
 
-  .hero-tag-orbit {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.75rem;
-    animation: none;
-  }
-
-  .orbit-core {
-    display: none;
-  }
-
-  .hero-tag {
-    position: static;
-    animation: none;
-    transform: none;
-    padding: 0.6rem 0.85rem;
-    font-size: 0.8rem;
+  .hero-pill {
+    min-height: 34px;
+    padding: 0.4rem 0.75rem;
+    font-size: 0.76rem;
   }
 
   .hero-stats {
