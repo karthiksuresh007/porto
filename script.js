@@ -30,6 +30,12 @@ const cursorDot = document.querySelector(".cursor-dot");
 const cursorRing = document.querySelector(".cursor-ring");
 const contactForm = document.getElementById("contact-form");
 const formStatus = document.getElementById("form-status");
+const heroSection = document.querySelector(".hero-section");
+const heroGrid = document.querySelector(".hero-grid");
+const heroCopy = document.querySelector(".hero-copy");
+const heroVisual = document.querySelector(".hero-visual");
+const heroStats = document.querySelector(".hero-stats");
+const photoFrame = document.querySelector(".photo-frame");
 
 let phraseIndex = 0;
 let charIndex = 0;
@@ -219,6 +225,35 @@ magneticButtons.forEach((button) => {
     button.style.transform = "";
   });
 });
+
+if (heroSection && window.matchMedia("(pointer:fine)").matches) {
+  heroSection.addEventListener("mousemove", (event) => {
+    const bounds = heroSection.getBoundingClientRect();
+    const x = ((event.clientX - bounds.left) / bounds.width) * 100;
+    const y = ((event.clientY - bounds.top) / bounds.height) * 100;
+    const offsetX = (x - 50) / 50;
+    const offsetY = (y - 50) / 50;
+
+    heroSection.style.setProperty("--spot-x", `${x}%`);
+    heroSection.style.setProperty("--spot-y", `${y}%`);
+
+    heroGrid.style.transform = `translate3d(${offsetX * 6}px, ${offsetY * 4}px, 0)`;
+    heroCopy.style.transform = `translate3d(${offsetX * -10}px, ${offsetY * -8}px, 0)`;
+    heroVisual.style.transform = `translate3d(${offsetX * 12}px, ${offsetY * 10}px, 0)`;
+    heroStats.style.transform = `translate3d(${offsetX * 4}px, ${offsetY * 6}px, 0)`;
+    photoFrame.style.transform = `rotateX(${offsetY * -4}deg) rotateY(${offsetX * 5}deg)`;
+  });
+
+  heroSection.addEventListener("mouseleave", () => {
+    heroGrid.style.transform = "";
+    heroCopy.style.transform = "";
+    heroVisual.style.transform = "";
+    heroStats.style.transform = "";
+    photoFrame.style.transform = "";
+    heroSection.style.setProperty("--spot-x", "50%");
+    heroSection.style.setProperty("--spot-y", "35%");
+  });
+}
 
 if (window.matchMedia("(pointer:fine)").matches) {
   window.addEventListener("mousemove", (event) => {
