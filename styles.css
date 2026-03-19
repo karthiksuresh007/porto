@@ -367,9 +367,9 @@ textarea {
 
 .hero-copy h1 {
   margin: 0;
-  font-family: "Outfit", "Space Grotesk", sans-serif;
+  font-family: "Quentin", "Outfit", "Space Grotesk", sans-serif;
   font-size: clamp(3.5rem, 10vw, 6.8rem);
-  font-weight: 800;
+  font-weight: 700;
   line-height: 0.88;
   letter-spacing: -0.08em;
   text-wrap: balance;
