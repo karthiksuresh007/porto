@@ -122,10 +122,10 @@ textarea {
   gap: 2rem;
   pointer-events: auto;
   border-radius: 999px;
-  border: 1px solid rgba(148, 163, 184, 0.08);
-  background: rgba(12, 12, 19, 0.46);
-  backdrop-filter: blur(14px);
-  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.22);
+  border: 1px solid rgba(148, 163, 184, 0.04);
+  background: transparent;
+  backdrop-filter: none;
+  box-shadow: none;
 }
 
 .brand {
