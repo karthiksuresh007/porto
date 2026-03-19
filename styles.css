@@ -1,15 +1,15 @@
 :root {
-  --bg: #0a0a0f;
-  --bg-soft: #11111b;
-  --surface: rgba(20, 20, 34, 0.76);
-  --surface-strong: rgba(17, 17, 30, 0.94);
-  --border: rgba(124, 58, 237, 0.35);
-  --border-cyan: rgba(6, 182, 212, 0.3);
-  --violet: #7c3aed;
-  --cyan: #06b6d4;
+  --bg: #060606;
+  --bg-soft: #111214;
+  --surface: rgba(20, 20, 20, 0.82);
+  --surface-strong: rgba(12, 12, 12, 0.96);
+  --border: rgba(255, 255, 255, 0.12);
+  --border-cyan: rgba(255, 255, 255, 0.08);
+  --violet: #d4d4d8;
+  --cyan: #f4f4f5;
   --amber: #f59e0b;
-  --text: #f8fafc;
-  --muted: #94a3b8;
+  --text: #fafafa;
+  --muted: #a1a1aa;
   --shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
   --radius: 28px;
   --header-height: 74px;
@@ -31,9 +31,9 @@ body {
   font-family: "DM Sans", sans-serif;
   color: var(--text);
   background:
-    radial-gradient(circle at 12% 20%, rgba(124, 58, 237, 0.18), transparent 28%),
-    radial-gradient(circle at 82% 12%, rgba(6, 182, 212, 0.16), transparent 26%),
-    radial-gradient(circle at 50% 120%, rgba(245, 158, 11, 0.08), transparent 32%),
+    radial-gradient(circle at 14% 18%, rgba(255, 255, 255, 0.05), transparent 24%),
+    radial-gradient(circle at 82% 12%, rgba(161, 161, 170, 0.08), transparent 24%),
+    radial-gradient(circle at 50% 120%, rgba(255, 255, 255, 0.03), transparent 30%),
     var(--bg);
   overflow-x: hidden;
 }
@@ -308,9 +308,9 @@ textarea {
 
 .hero-aurora {
   background:
-    radial-gradient(circle at 18% 24%, rgba(124, 58, 237, 0.18), transparent 24%),
-    radial-gradient(circle at 78% 22%, rgba(6, 182, 212, 0.16), transparent 22%),
-    radial-gradient(circle at 48% 74%, rgba(245, 158, 11, 0.09), transparent 26%);
+    radial-gradient(circle at 18% 24%, rgba(255, 255, 255, 0.06), transparent 24%),
+    radial-gradient(circle at 78% 22%, rgba(161, 161, 170, 0.08), transparent 22%),
+    radial-gradient(circle at 48% 74%, rgba(255, 255, 255, 0.03), transparent 26%);
   filter: blur(10px);
   animation: auroraShift 16s ease-in-out infinite alternate;
 }
@@ -345,8 +345,8 @@ textarea {
 
 .hero-grid {
   display: grid;
-  grid-template-columns: minmax(0, 0.95fr) minmax(520px, 1.05fr);
-  gap: 1.3rem;
+  grid-template-columns: minmax(0, 1fr) minmax(390px, 0.82fr);
+  gap: 2.6rem;
   align-items: center;
   transition: transform 0.2s ease;
 }
@@ -575,24 +575,25 @@ textarea {
 
 .hero-visual {
   position: relative;
-  min-height: 650px;
+  min-height: 560px;
   display: grid;
   place-items: center;
   align-content: center;
   gap: 0.85rem;
+  justify-self: end;
   transition: transform 0.2s ease;
 }
 
 .photo-frame {
   position: relative;
-  width: min(500px, 100%);
-  aspect-ratio: 0.84;
-  padding: 16px;
-  border-radius: 42px;
+  width: min(430px, 100%);
+  aspect-ratio: 0.88;
+  padding: 14px;
+  border-radius: 36px;
   background:
-    linear-gradient(135deg, rgba(124, 58, 237, 0.55), rgba(6, 182, 212, 0.3)) border-box,
-    rgba(255, 255, 255, 0.02) padding-box;
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+    linear-gradient(135deg, rgba(255, 255, 255, 0.22), rgba(161, 161, 170, 0.08)) border-box,
+    rgba(255, 255, 255, 0.01) padding-box;
+  box-shadow: 0 24px 56px rgba(0, 0, 0, 0.34);
   overflow: hidden;
   transform-style: preserve-3d;
 }
@@ -601,8 +602,8 @@ textarea {
   content: "";
   position: absolute;
   inset: -40%;
-  background: conic-gradient(from 20deg, transparent 0deg, rgba(6, 182, 212, 0.55) 90deg, transparent 180deg, rgba(124, 58, 237, 0.7) 270deg, transparent 360deg);
-  animation: spin 10s linear infinite;
+  background: conic-gradient(from 20deg, transparent 0deg, rgba(255, 255, 255, 0.22) 90deg, transparent 180deg, rgba(161, 161, 170, 0.18) 270deg, transparent 360deg);
+  animation: spin 14s linear infinite;
 }
 
 .frame-scanline {
@@ -610,7 +611,7 @@ textarea {
   inset: -10% 0 auto 0;
   z-index: 2;
   height: 26%;
-  background: linear-gradient(180deg, transparent, rgba(6, 182, 212, 0.18), transparent);
+  background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.12), transparent);
   mix-blend-mode: screen;
   animation: scanline 5.5s ease-in-out infinite;
 }
@@ -622,8 +623,8 @@ textarea {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 30px;
-  background: linear-gradient(180deg, rgba(17, 17, 28, 0.94), rgba(8, 8, 14, 0.98));
+  border-radius: 26px;
+  background: linear-gradient(180deg, rgba(17, 17, 17, 0.96), rgba(8, 8, 8, 0.98));
 }
 
 .photo-fallback {
@@ -637,11 +638,11 @@ textarea {
 }
 
 .hero-tag-track {
-  width: min(420px, 100%);
+  width: min(360px, 100%);
   padding: 0.75rem;
   border-radius: 999px;
   overflow: hidden;
-  background: rgba(12, 12, 19, 0.42);
+  background: rgba(14, 14, 14, 0.6);
 }
 
 .hero-tag-rail {
@@ -674,7 +675,7 @@ textarea {
 .halo-one {
   width: 180px;
   height: 180px;
-  background: rgba(124, 58, 237, 0.28);
+  background: rgba(255, 255, 255, 0.08);
   top: 10%;
   right: 8%;
 }
@@ -682,7 +683,7 @@ textarea {
 .halo-two {
   width: 210px;
   height: 210px;
-  background: rgba(6, 182, 212, 0.2);
+  background: rgba(161, 161, 170, 0.12);
   bottom: 18%;
   left: 6%;
 }
@@ -697,7 +698,7 @@ textarea {
 
 .stat-card,
 .glass-card {
-  border: 1px solid rgba(124, 58, 237, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
   backdrop-filter: blur(18px);
   box-shadow: var(--shadow);

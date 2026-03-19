@@ -237,11 +237,11 @@ if (heroSection && window.matchMedia("(pointer:fine)").matches) {
     heroSection.style.setProperty("--spot-x", `${x}%`);
     heroSection.style.setProperty("--spot-y", `${y}%`);
 
-    heroGrid.style.transform = `translate3d(${offsetX * 6}px, ${offsetY * 4}px, 0)`;
-    heroCopy.style.transform = `translate3d(${offsetX * -10}px, ${offsetY * -8}px, 0)`;
-    heroVisual.style.transform = `translate3d(${offsetX * 12}px, ${offsetY * 10}px, 0)`;
-    heroStats.style.transform = `translate3d(${offsetX * 4}px, ${offsetY * 6}px, 0)`;
-    photoFrame.style.transform = `rotateX(${offsetY * -4}deg) rotateY(${offsetX * 5}deg)`;
+    heroGrid.style.transform = `translate3d(${offsetX * 4}px, ${offsetY * 3}px, 0)`;
+    heroCopy.style.transform = `translate3d(${offsetX * -7}px, ${offsetY * -6}px, 0)`;
+    heroVisual.style.transform = `translate3d(${offsetX * 7}px, ${offsetY * 6}px, 0)`;
+    heroStats.style.transform = `translate3d(${offsetX * 3}px, ${offsetY * 4}px, 0)`;
+    photoFrame.style.transform = `rotateX(${offsetY * -2.5}deg) rotateY(${offsetX * 3}deg)`;
   });
 
   heroSection.addEventListener("mouseleave", () => {
