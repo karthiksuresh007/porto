@@ -36,6 +36,10 @@ const heroCopy = document.querySelector(".hero-copy");
 const heroVisual = document.querySelector(".hero-visual");
 const heroStats = document.querySelector(".hero-stats");
 const photoFrame = document.querySelector(".photo-frame");
+const aboutPhotoStack = document.querySelector(".about-photo-stack");
+const aboutLargeShot = document.querySelector(".about-shot-large");
+const aboutSmallShot = document.querySelector(".about-shot-small");
+const aboutPhotoBadge = document.querySelector(".about-photo-badge");
 
 let phraseIndex = 0;
 let charIndex = 0;
@@ -252,6 +256,26 @@ if (heroSection && window.matchMedia("(pointer:fine)").matches) {
     photoFrame.style.transform = "";
     heroSection.style.setProperty("--spot-x", "50%");
     heroSection.style.setProperty("--spot-y", "35%");
+  });
+}
+
+if (aboutPhotoStack && window.matchMedia("(pointer:fine)").matches) {
+  aboutPhotoStack.addEventListener("mousemove", (event) => {
+    const bounds = aboutPhotoStack.getBoundingClientRect();
+    const x = ((event.clientX - bounds.left) / bounds.width) - 0.5;
+    const y = ((event.clientY - bounds.top) / bounds.height) - 0.5;
+
+    aboutPhotoStack.style.transform = `rotateX(${y * -5}deg) rotateY(${x * 7}deg)`;
+    aboutLargeShot.style.transform = `rotate(-5deg) translate3d(${x * -12}px, ${y * -12}px, 18px)`;
+    aboutSmallShot.style.transform = `rotate(8deg) translate3d(${x * 14}px, ${y * 14}px, 28px)`;
+    aboutPhotoBadge.style.transform = `translate3d(${x * 8}px, ${y * 8}px, 20px)`;
+  });
+
+  aboutPhotoStack.addEventListener("mouseleave", () => {
+    aboutPhotoStack.style.transform = "";
+    aboutLargeShot.style.transform = "";
+    aboutSmallShot.style.transform = "";
+    aboutPhotoBadge.style.transform = "";
   });
 }
 
