@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Priyam Kumar portfolio website showcasing full-stack development, projects, certifications, and content creation.">
+  <title>Priyam Kumar | Developer & Creator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkR4j8NVjv1KzG72H2rqj8wyuup6o8wQe0GA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <svg class="icon-sprite" aria-hidden="true" focusable="false">
+    <symbol id="icon-github" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M12 .5C5.65.5.5 5.66.5 12.02c0 5.09 3.29 9.4 7.86 10.92.57.1.78-.25.78-.55v-2.15c-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.72.08-.71.08-.71 1.16.08 1.77 1.19 1.77 1.19 1.02 1.76 2.68 1.25 3.34.96.1-.75.4-1.25.73-1.53-2.55-.29-5.23-1.28-5.23-5.69 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11.02 11.02 0 0 1 5.77 0c2.2-1.49 3.16-1.18 3.16-1.18.62 1.59.23 2.76.12 3.05.73.8 1.18 1.83 1.18 3.08 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.15v3.18c0 .3.2.65.79.55A11.53 11.53 0 0 0 23.5 12C23.5 5.66 18.34.5 12 .5Z"/>
+    </symbol>
+    <symbol id="icon-linkedin" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M4.98 3.5A2.48 2.48 0 1 0 5 8.46a2.48 2.48 0 0 0-.02-4.96ZM2.75 9.75h4.5V21h-4.5V9.75Zm7.28 0h4.31v1.54h.06c.6-1.08 2.07-2.22 4.26-2.22 4.55 0 5.39 3 5.39 6.89V21h-4.5v-4.46c0-1.06-.02-2.43-1.48-2.43-1.49 0-1.72 1.16-1.72 2.35V21h-4.5V9.75Z"/>
+    </symbol>
+    <symbol id="icon-youtube" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M23.5 6.2a3 3 0 0 0-2.1-2.12C19.54 3.5 12 3.5 12 3.5s-7.54 0-9.4.58A3 3 0 0 0 .5 6.2 31.7 31.7 0 0 0 0 12a31.7 31.7 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.12c1.86.58 9.4.58 9.4.58s7.54 0 9.4-.58a3 3 0 0 0 2.1-2.12A31.7 31.7 0 0 0 24 12a31.7 31.7 0 0 0-.5-5.8ZM9.6 15.68V8.32L15.92 12 9.6 15.68Z"/>
+    </symbol>
+    <symbol id="icon-instagram" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.75A4 4 0 0 0 3.75 7.75v8.5A4 4 0 0 0 7.75 20.25h8.5a4 4 0 0 0 4-4v-8.5a4 4 0 0 0-4-4h-8.5Zm8.88 1.31a1.06 1.06 0 1 1 0 2.12 1.06 1.06 0 0 1 0-2.12ZM12 6.5A5.5 5.5 0 1 1 6.5 12 5.5 5.5 0 0 1 12 6.5Zm0 1.75A3.75 3.75 0 1 0 15.75 12 3.76 3.76 0 0 0 12 8.25Z"/>
+    </symbol>
+  </svg>
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+  <div class="site-shell">
+    <header class="site-header">
+      <nav class="navbar container" aria-label="Primary navigation">
+        <a class="brand" href="#home">
+          <span>&lt;PK /&gt;</span>
+          <span class="brand-caret"></span>
+        </a>
+        <div class="nav-links" id="nav-links">
+          <a href="#home" class="nav-link active">Home</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#resume" class="nav-link">Resume</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#certifications" class="nav-link">Certifications</a>
+          <div class="nav-dropdown">
+            <button class="dropdown-toggle" type="button" aria-expanded="false" aria-controls="more-menu">
+              More
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="dropdown-menu" id="more-menu">
+              <a href="#skills" class="nav-link">Skills</a>
+              <a href="#experience" class="nav-link">Experience</a>
+              <a href="#achievements" class="nav-link">Achievements</a>
+              <a href="#socials" class="nav-link">Socials</a>
+              <a href="#contact" class="nav-link">Contact</a>
+            </div>
+          </div>
+        </div>
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-controls="mobile-drawer" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+      <aside class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+        <a href="#home" class="drawer-link">Home</a>
+        <a href="#about" class="drawer-link">About</a>
+        <a href="#resume" class="drawer-link">Resume</a>
+        <a href="#projects" class="drawer-link">Projects</a>
+        <a href="#certifications" class="drawer-link">Certifications</a>
+        <a href="#skills" class="drawer-link">Skills</a>
+        <a href="#experience" class="drawer-link">Experience</a>
+        <a href="#achievements" class="drawer-link">Achievements</a>
+        <a href="#socials" class="drawer-link">Socials</a>
+        <a href="#contact" class="drawer-link">Contact</a>
+      </aside>
+    </header>
+
+    <main>
+      <section class="hero-section" id="home">
+        <div class="hero-particles" id="hero-particles" aria-hidden="true"></div>
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">Hey there, I'm</p>
+            <div class="identity-pill">
+              <span id="identity-text">&lt; Developer /&gt;</span>
+            </div>
+            <h1>PRIYAM <span>KUMAR</span></h1>
+            <div class="type-row">
+              <span class="type-label">I build as a</span>
+              <span class="typed-output" id="typed-output" aria-live="polite"></span>
+            </div>
+            <p class="hero-bio">
+              Building scalable web apps by day, creating viral content by night. I turn ideas into experiences in code and on camera.
+            </p>
+            <div class="cta-row">
+              <a href="#projects" class="btn btn-primary magnetic">View My Work</a>
+              <a href="resume.pdf" class="btn btn-secondary magnetic" download>Download Resume</a>
+            </div>
+            <div class="social-row">
+              <a href="https://github.com/Priyam120" target="_blank" rel="noreferrer" aria-label="GitHub">
+                <svg class="social-icon" viewBox="0 0 24 24"><use href="#icon-github"></use></svg>
+              </a>
+              <a href="https://www.linkedin.com/in/priyam-kumar-sharma/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+                <svg class="social-icon" viewBox="0 0 24 24"><use href="#icon-linkedin"></use></svg>
+              </a>
+              <a href="https://www.youtube.com/@PremDiaries18" target="_blank" rel="noreferrer" aria-label="YouTube">
+                <svg class="social-icon" viewBox="0 0 24 24"><use href="#icon-youtube"></use></svg>
+              </a>
+              <a href="https://www.instagram.com/real_prem18/" target="_blank" rel="noreferrer" aria-label="Instagram">
+                <svg class="social-icon" viewBox="0 0 24 24"><use href="#icon-instagram"></use></svg>
+              </a>
+            </div>
+          </div>
+          <div class="hero-visual reveal">
+            <div class="photo-frame">
+              <div class="photo-badge">
+                <span class="status-dot"></span>
+                Available for Opportunities
+              </div>
+              <img src="propic.jpg" alt="Portrait of Priyam Kumar" class="profile-photo" id="profile-photo" loading="lazy">
+              <div class="photo-fallback" id="photo-fallback" hidden>
+                <span>PK</span>
+              </div>
+            </div>
+            <div class="halo halo-one"></div>
+            <div class="halo halo-two"></div>
+          </div>
+        </div>
+        <div class="container hero-stats reveal">
+          <div class="stat-card">
+            <strong data-counter="4">0</strong>
+            <span>Projects Built</span>
+          </div>
+          <div class="stat-card">
+            <strong data-counter="1000000">0</strong>
+            <span>Social Reach</span>
+          </div>
+          <div class="stat-card">
+            <strong data-counter="3">0</strong>
+            <span>Certifications</span>
+          </div>
+          <div class="stat-card">
+            <strong data-counter="3">0</strong>
+            <span>Hackathon Finish</span>
+          </div>
+        </div>
+        <a class="scroll-indicator" href="#about" aria-label="Scroll to About section">
+          <span></span>
+        </a>
+      </section>
+
+      <section class="content-section angled" id="about" data-watermark="ABOUT">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="section-tag">About Me</p>
+            <h2>Engineer, builder, and on-camera storyteller.</h2>
+          </div>
+          <div class="about-grid">
+            <div class="about-copy glass-card reveal">
+              <p>
+                I'm Priyam Kumar, a final-year B.Tech CSE student at Lovely Professional University, Punjab. I'm passionate about building real-world applications that solve actual problems, from ML-powered health apps to smart hiring systems. When I'm not coding, I'm in front of the camera creating content that's reached over a million people. I believe the best engineers are also great communicators, and I live that every day.
+              </p>
+              <div class="facts-grid">
+                <article class="fact-card">
+                  <i class="fa-solid fa-graduation-cap"></i>
+                  <div>
+                    <strong>LPU</strong>
+                    <span>B.Tech CSE (2023-Present)</span>
+                  </div>
+                </article>
+                <article class="fact-card">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <div>
+                    <strong>Bihar, India</strong>
+                    <span>Roots with a campus base in Punjab</span>
+                  </div>
+                </article>
+                <article class="fact-card">
+                  <i class="fa-solid fa-briefcase"></i>
+                  <div>
+                    <strong>Open to roles</strong>
+                    <span>Internship and full-time opportunities</span>
+                  </div>
+                </article>
+                <article class="fact-card">
+                  <i class="fa-solid fa-bullseye"></i>
+                  <div>
+                    <strong>CGPA 6.20</strong>
+                    <span>Focused on applied learning</span>
+                  </div>
+                </article>
+                <article class="fact-card">
+                  <i class="fa-solid fa-camera-retro"></i>
+                  <div>
+                    <strong>1M+ reach</strong>
+                    <span>Audience built across short-form content</span>
+                  </div>
+                </article>
+                <article class="fact-card">
+                  <i class="fa-solid fa-code"></i>
+                  <div>
+                    <strong>Competitive practice</strong>
+                    <span>LeetCode and Coding Ninjas</span>
+                  </div>
+                </article>
+              </div>
+              <div class="traits-row">
+                <span>Problem Solver</span>
+                <span>Team Player</span>
+                <span>Adaptable</span>
+                <span>Creative</span>
+                <span>Communicator</span>
+              </div>
+            </div>
+            <div class="about-visual reveal">
+              <div class="about-photo-stack">
+                <figure class="about-shot about-shot-large">
+                  <img src="a1.jpg" alt="Priyam Kumar portrait 1" loading="lazy">
+                </figure>
+                <figure class="about-shot about-shot-small">
+                  <img src="a2.jpg" alt="Priyam Kumar portrait 2" loading="lazy">
+                </figure>
+                <div class="about-photo-badge">Moments beyond the code</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section" id="resume" data-watermark="RESUME">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="section-tag">Resume</p>
+            <h2>A dark-mode snapshot of education, skills, and proof of work.</h2>
+          </div>
+          <div class="resume-shell glass-card reveal">
+            <div class="resume-topbar">
+              <div class="doc-dots">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <a href="resume.pdf" class="btn btn-primary magnetic" download>Download Full Resume (PDF)</a>
+            </div>
+            <div class="resume-grid">
+              <article class="resume-panel">
+                <h3>Education</h3>
+                <div class="table-wrap">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Degree</th>
+                        <th>Institution</th>
+                        <th>Score</th>
+                        <th>Year</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>B.Tech - CSE</td>
+                        <td>Lovely Professional University, Punjab</td>
+                        <td>CGPA: 6.20</td>
+                        <td>Aug 2023 - Present</td>
+                      </tr>
+                      <tr>
+                        <td>Intermediate (12th)</td>
+                        <td>Karpuri Thakur College, Motihari, Bihar</td>
+                        <td>65.0%</td>
+                        <td>Apr 2022 - Mar 2023</td>
+                      </tr>
+                      <tr>
+                        <td>Matriculation (10th)</td>
+                        <td>Rajhans Public School, Motihari, Bihar</td>
+                        <td>51.60%</td>
+                        <td>Apr 2020 - Mar 2021</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </article>
+              <article class="resume-panel">
+                <h3>Skills</h3>
+                <ul class="resume-list">
+                  <li><strong>Languages:</strong> C++, JavaScript, C, PHP, Python</li>
+                  <li><strong>Frameworks:</strong> HTML/CSS, Bootstrap, Node.js, React, Tailwind CSS</li>
+                  <li><strong>Tools:</strong> MySQL, MongoDB, Firebase</li>
+                  <li><strong>Soft Skills:</strong> Problem-Solving, Team Player, Project Management, Adaptability</li>
+                </ul>
+              </article>
+              <article class="resume-panel">
+                <h3>Projects</h3>
+                <ul class="resume-list">
+                  <li>Heart Disease Prediction - React, FastAPI, scikit-learn, MongoDB (Mar 2024)</li>
+                  <li>Restaurant Finder - Python, External APIs (May 2024)</li>
+                  <li>Skill Based Candidate Shortlisting - HTML, JS, CSS (Nov 2023)</li>
+                  <li>Movie Rating &amp; Review Platform - AngularJS, Node.js (Dec 2023)</li>
+                </ul>
+              </article>
+              <article class="resume-panel">
+                <h3>Achievements</h3>
+                <ul class="resume-list">
+                  <li>3rd Place - LPU Hackathon</li>
+                  <li>Coding Ninjas Competition Participant</li>
+                  <li>LeetCode Competition Participant</li>
+                </ul>
+                <h3>Certificates</h3>
+                <ul class="resume-list">
+                  <li>Fundamentals of Data Structure using C++ - July 2023</li>
+                  <li>Linux System Administration - Sep 2023</li>
+                  <li>Responsive Web Design - Dec 2023</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section angled" id="projects" data-watermark="PROJECTS">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="section-tag">Projects</p>
+            <h2>Full-stack builds shaped around utility, APIs, and real-world problem solving.</h2>
+          </div>
+          <div class="project-grid">
+            <article class="project-card glass-card reveal">
+              <div class="project-meta">
+                <span>March 2024</span>
+                <span>ML + Full Stack</span>
+              </div>
+              <h3>Heart Disease Prediction</h3>
+              <ul>
+                <li>Built a full-stack ML app to estimate heart disease risk through a clean prediction workflow.</li>
+                <li>Combined React, FastAPI, scikit-learn, and MongoDB with sanitization and CORS-safe APIs.</li>
+                <li>Structured the app for maintainability with environment-based configuration.</li>
+              </ul>
+              <div class="tag-row">
+                <span>React</span>
+                <span>FastAPI</span>
+                <span>MongoDB</span>
+                <span>scikit-learn</span>
+                <span>Python</span>
+                <span>REST APIs</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/Priyam120" target="_blank" rel="noreferrer" class="btn btn-secondary magnetic">GitHub</a>
+                <a href="#contact" class="btn btn-primary magnetic">Discuss Demo</a>
+              </div>
+            </article>
+            <article class="project-card glass-card reveal">
+              <div class="project-meta">
+                <span>May 2024</span>
+                <span>API Integration</span>
+              </div>
+              <h3>Restaurant Finder</h3>
+              <ul>
+                <li>Fetched real-time restaurant data using external APIs and location-based search flows.</li>
+                <li>Focused on reliable request handling, clean result mapping, and end-to-end delivery.</li>
+                <li>Strengthened production-style API integration and data presentation skills.</li>
+              </ul>
+              <div class="tag-row">
+                <span>Python</span>
+                <span>External APIs</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/Priyam120" target="_blank" rel="noreferrer" class="btn btn-secondary magnetic">GitHub</a>
+                <a href="#contact" class="btn btn-primary magnetic">Request Walkthrough</a>
+              </div>
+            </article>
+            <article class="project-card glass-card reveal">
+              <div class="project-meta">
+                <span>November 2023</span>
+                <span>Hiring Tech</span>
+              </div>
+              <h3>Skill-Based Candidate Shortlisting</h3>
+              <ul>
+                <li>Automated resume filtering and ranking to improve early-stage hiring efficiency.</li>
+                <li>Parsed skill data from resumes and job descriptions to generate relevance-based scoring.</li>
+                <li>Explored lightweight NLP-style logic in a browser-driven interface.</li>
+              </ul>
+              <div class="tag-row">
+                <span>HTML</span>
+                <span>JavaScript</span>
+                <span>CSS</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/Priyam120" target="_blank" rel="noreferrer" class="btn btn-secondary magnetic">GitHub</a>
+                <a href="#contact" class="btn btn-primary magnetic">See Use Case</a>
+              </div>
+            </article>
+            <article class="project-card glass-card reveal">
+              <div class="project-meta">
+                <span>December 2023</span>
+                <span>Media Platform</span>
+              </div>
+              <h3>Movie Rating &amp; Review Platform</h3>
+              <ul>
+                <li>Designed a dynamic review experience with ratings, comments, and structured movie data flows.</li>
+                <li>Connected an AngularJS frontend to a Node.js backend using RESTful APIs.</li>
+                <li>Focused on interactive user input and efficient front-back communication.</li>
+              </ul>
+              <div class="tag-row">
+                <span>AngularJS</span>
+                <span>Node.js</span>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/Priyam120" target="_blank" rel="noreferrer" class="btn btn-secondary magnetic">GitHub</a>
+                <a href="#contact" class="btn btn-primary magnetic">View Details</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section" id="certifications" data-watermark="CERTIFIED">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="section-tag">Credentials &amp; Certifications</p>
+            <h2>A premium wall of structured learning and formal validation.</h2>
+          </div>
+          <div class="certificate-grid">
+            <article class="certificate-card reveal">
+              <div class="certificate-inner">
+                <div class="certificate-face certificate-front glass-card">
+                  <div class="verified-badge"><i class="fa-solid fa-circle-check"></i> Verified</div>
+                  <h3>Linux System Administration</h3>
+                  <p>Summer Training</p>
+                  <span class="certificate-grade">Grade O</span>
+                </div>
+                <div class="certificate-face certificate-back glass-card">
+                  <img src="linux.png" alt="Linux System Administration certificate" class="certificate-image" loading="lazy">
+                </div>
+              </div>
+            </article>
+            <article class="certificate-card reveal">
+              <div class="certificate-inner">
+                <div class="certificate-face certificate-front glass-card">
+                  <div class="verified-badge"><i class="fa-solid fa-circle-check"></i> Verified</div>
+                  <h3>Basics of DSA using C++</h3>
+                  <p>Technical Foundation</p>
+                  <span class="certificate-grade">Grade A</span>
+                </div>
+                <div class="certificate-face certificate-back glass-card">
+                  <img src="dsa.png" alt="DSA certificate" class="certificate-image" loading="lazy">
+                </div>
+              </div>
+            </article>
+            <article class="certificate-card reveal">
+              <div class="certificate-inner">
+                <div class="certificate-face certificate-front glass-card">
+                  <div class="verified-badge"><i class="fa-solid fa-circle-check"></i> Verified</div>
+                  <h3>Skill Sink</h3>
+                  <p>Professional Excellence Track</p>
+                  <span class="certificate-grade">Grade A</span>
+                </div>
+                <div class="certificate-face certificate-back glass-card">
+                  <img src="skillsink.jpg" alt="Skill Sink certificate" class="certificate-image" loading="lazy">
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section angled" id="skills" data-watermark="SKILLS">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="section-tag">Skills &amp; Technologies</p>
+            <h2>Developer tools, platforms, and core concepts mapped into a visual stack.</h2>
+          </div>
+          <div class="skills-layout">
+            <div class="icon-cloud glass-card reveal">
+              <h3>Stack Cloud</h3>
+              <div class="icon-grid">
+                <div class="icon-card"><i class="devicon-cplusplus-plain"></i><span>C++</span></div>
+                <div class="icon-card"><i class="devicon-javascript-plain"></i><span>JavaScript</span></div>
+                <div class="icon-card"><i class="devicon-python-plain"></i><span>Python</span></div>
+                <div class="icon-card"><i class="devicon-c-plain"></i><span>C</span></div>
+                <div class="icon-card"><i class="devicon-php-plain"></i><span>PHP</span></div>
+                <div class="icon-card"><i class="devicon-react-original"></i><span>React</span></div>
+                <div class="icon-card"><i class="devicon-html5-plain"></i><span>HTML5</span></div>
+                <div class="icon-card"><i class="devicon-css3-plain"></i><span>CSS3</span></div>
+                <div class="icon-card"><i class="devicon-tailwindcss-original"></i><span>Tailwind CSS</span></div>
+                <div class="icon-card"><i class="devicon-bootstrap-plain"></i><span>Bootstrap</span></div>
+                <div class="icon-card"><i class="devicon-angularjs-plain"></i><span>AngularJS</span></div>
+                <div class="icon-card"><i class="devicon-nodejs-plain"></i><span>Node.js</span></div>
+                <div class="icon-card"><i class="devicon-express-original"></i><span>Express.js</span></div>
+                <div class="icon-card"><i class="devicon-fastapi-plain"></i><span>FastAPI</span></div>
+                <div class="icon-card"><i class="devicon-mongodb-plain"></i><span>MongoDB</span></div>
+                <div class="icon-card"><i class="devicon-mysql-plain"></i><span>MySQL</span></div>
+                <div class="icon-card"><i class="devicon-firebase-plain"></i><span>Firebase</span></div>
+                <div class="icon-card"><i class="devicon-git-plain"></i><span>Git</span></div>
+                <div class="icon-card"><i class="devicon-github-original"></i><span>GitHub</span></div>
+                <div class="icon-card"><i class="devicon-vscode-plain"></i><span>VS Code</span></div>
+                <div class="icon-card"><i class="fa-solid fa-flask"></i><span>Postman</span></div>
+                <div class="icon-card"><i class="fa-solid fa-diagram-project"></i><span>REST APIs</span></div>
+                <div class="icon-card"><i class="fa-solid fa-cubes"></i><span>Data Structures</span></div>
+                <div class="icon-card"><i class="fa-solid fa-brain"></i><span>Algorithms</span></div>
+                <div class="icon-card"><i class="fa-solid fa-layer-group"></i><span>OOP</span></div>
+                <div class="icon-card"><i class="fa-solid fa-cloud"></i><span>Cloud Basics</span></div>
+              </div>
+            </div>
+            <div class="skill-bars glass-card reveal">
+              <h3>Proficiency Snapshot</h3>
+              <div class="skill-bar" data-fill="80">
+                <div class="skill-head"><span>React</span><span>80%</span></div>
+                <div class="bar-track"><div class="bar-fill"></div></div>
+              </div>
+              <div class="skill-bar" data-fill="75">
+                <div class="skill-head"><span>Node.js</span><span>75%</span></div>
+                <div class="bar-track"><div class="bar-fill"></div></div>
+              </div>
+              <div class="skill-bar" data-fill="85">
+                <div class="skill-head"><span>JavaScript</span><span>85%</span></div>
+                <div class="bar-track"><div class="bar-fill"></div></div>
+              </div>
+              <div class="skill-bar" data-fill="70">
+                <div class="skill-head"><span>Python</span><span>70%</span></div>
+                <div class="bar-track"><div class="bar-fill"></div></div>
+              </div>
+              <div class="skill-bar" data-fill="75">
+                <div class="skill-head"><span>C++</span><span>75%</span></div>
+                <div class="bar-track"><div class="bar-fill"></div></div>
+              </div>
+              <div class="skill-bar" data-fill="70">
+                <div class="skill-head"><span>MongoDB</span><span>70%</span></div>
+                <div class="bar-track"><div class="bar-fill"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section" id="experience" data-watermark="TIMELINE">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="section-tag">Experience</p>
+            <h2>Academic and creator-side momentum, organized as an ongoing timeline.</h2>
+          </div>
+          <div class="timeline">
+            <article class="timeline-item reveal">
+              <div class="timeline-content glass-card">
+                <span class="timeline-date">Aug 2023 - Present</span>
+                <h3>LPU - B.Tech CSE Student</h3>
+                <ul>
+                  <li>Worked on 4+ real-world full-stack projects across web and ML use cases.</li>
+                  <li>Participated in university hackathons and competitive coding events.</li>
+                  <li>Completed focused skill development tracks in Linux, DSA, and professional excellence.</li>
+                </ul>
+              </div>
+            </article>
+            <article class="timeline-item reveal">
+              <div class="timeline-content glass-card">
+                <span class="timeline-date">Active Creator</span>
+                <h3>YouTube and Instagram - Personal Brand</h3>
+                <ul>
+                  <li>Built a combined social reach of 1M+ through consistent storytelling and short-form content.</li>
+                  <li>Balanced code-focused identity with creator energy across two major platforms.</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section angled" id="achievements" data-watermark="WINS">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="section-tag">Achievements &amp; Hackathons</p>
+            <h2>A trophy-room treatment for milestones, competitions, and standout finishes.</h2>
+          </div>
+          <div class="achievement-layout">
+            <div class="achievement-list glass-card reveal">
+              <article>
+                <h3><i class="fa-solid fa-medal"></i> 3rd Place - LPU Hackathon</h3>
+                <p>Competed against multiple teams and finished on the podium with an innovative solution under hackathon pressure.</p>
+              </article>
+              <article>
+                <h3><i class="fa-solid fa-laptop-code"></i> Coding Ninjas Competition</h3>
+                <p>Participated to sharpen programming proficiency and benchmark problem-solving under timed conditions.</p>
+              </article>
+              <article>
+                <h3><i class="fa-solid fa-bolt"></i> LeetCode Competitions</h3>
+                <p>Regular practice through competition rounds to improve algorithmic thinking and coding speed.</p>
+              </article>
+            </div>
+            <div class="hackathon-card glass-card reveal">
+              <span class="winner-chip">Finalist &amp; Winner</span>
+              <h3>LPU Hackathon</h3>
+              <div class="hackathon-result">3rd Place</div>
+              <p>Built an innovative solution while competing against multiple teams, then converted the event into a visible proof point for execution under pressure.</p>
+              <div class="tag-row">
+                <span>Hackathon</span>
+                <span>Prototype</span>
+                <span>Teamwork</span>
+                <span>Execution</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section" id="socials" data-watermark="SOCIAL">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="section-tag">Content Creation</p>
+            <h2>Beyond code, a creator identity built around reach, consistency, and platform-native storytelling.</h2>
+          </div>
+          <p class="social-intro reveal">
+            Beyond code, I'm a storyteller. With 1M+ reach across platforms, I create content that connects with people. Check out my channels.
+          </p>
+          <div class="social-motion-band reveal" aria-hidden="true">
+            <span class="social-float"><svg class="social-mark" viewBox="0 0 24 24"><use href="#icon-youtube"></use></svg><small>YouTube</small></span>
+            <span class="social-float"><svg class="social-mark" viewBox="0 0 24 24"><use href="#icon-instagram"></use></svg><small>Instagram</small></span>
+            <span class="social-float"><svg class="social-mark" viewBox="0 0 24 24"><use href="#icon-linkedin"></use></svg><small>LinkedIn</small></span>
+            <span class="social-float"><svg class="social-mark" viewBox="0 0 24 24"><use href="#icon-github"></use></svg><small>GitHub</small></span>
+          </div>
+          <div class="social-grid">
+            <article class="social-card youtube reveal">
+              <svg class="social-mark" viewBox="0 0 24 24"><use href="#icon-youtube"></use></svg>
+              <h3>@PremDiaries18</h3>
+              <p>YouTube channel focused on personality-driven content with consistent creator energy and audience connection.</p>
+              <a href="https://www.youtube.com/@PremDiaries18" target="_blank" rel="noreferrer" class="btn btn-primary magnetic">Watch on YouTube</a>
+            </article>
+            <article class="social-card instagram reveal">
+              <svg class="social-mark" viewBox="0 0 24 24"><use href="#icon-instagram"></use></svg>
+              <h3>@real_prem18</h3>
+              <p>Instagram presence blending lifestyle, short-form storytelling, and a strong visual content rhythm.</p>
+              <a href="https://www.instagram.com/real_prem18/" target="_blank" rel="noreferrer" class="btn btn-primary magnetic">Follow on Instagram</a>
+            </article>
+            <article class="social-card linkedin reveal">
+              <svg class="social-mark" viewBox="0 0 24 24"><use href="#icon-linkedin"></use></svg>
+              <h3>Priyam Kumar</h3>
+              <p>Professional profile highlighting projects, technical growth, and career-facing opportunities.</p>
+              <a href="https://www.linkedin.com/in/priyam-kumar-sharma/" target="_blank" rel="noreferrer" class="btn btn-primary magnetic">Connect on LinkedIn</a>
+            </article>
+          </div>
+          <div class="stats-banner glass-card reveal">
+            <div><strong data-counter="1000000">0</strong><span>Combined Reach</span></div>
+            <div><strong data-counter="2">0</strong><span>Active Platforms</span></div>
+            <div><strong class="infinity-symbol">&infin;</strong><span>Stories to Tell</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section angled" id="contact" data-watermark="CONTACT">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="section-tag">Contact</p>
+            <h2>Open to collaboration, internships, and full-time opportunities.</h2>
+          </div>
+          <div class="contact-layout">
+            <div class="contact-info glass-card reveal">
+              <h3>Let's build something sharp.</h3>
+              <p>If you need a developer who can also communicate, present, and ship with personality, reach out.</p>
+              <ul class="contact-list">
+                <li><i class="fa-solid fa-envelope"></i><a href="mailto:sharmapriyam140@gmail.com">sharmapriyam140@gmail.com</a></li>
+                <li><i class="fa-solid fa-phone"></i><a href="tel:+917079869256">+91 7079869256</a></li>
+                <li><i class="fa-solid fa-location-dot"></i><span>Punjab, India (LPU Campus)</span></li>
+                <li><svg class="social-icon" viewBox="0 0 24 24"><use href="#icon-linkedin"></use></svg><a href="https://www.linkedin.com/in/priyam-kumar-sharma/" target="_blank" rel="noreferrer">/in/priyam-kumar-sharma</a></li>
+              </ul>
+              <div class="social-row contact-socials">
+                <a href="https://github.com/Priyam120" target="_blank" rel="noreferrer" aria-label="GitHub">
+                  <svg class="social-icon" viewBox="0 0 24 24"><use href="#icon-github"></use></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/priyam-kumar-sharma/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+                  <svg class="social-icon" viewBox="0 0 24 24"><use href="#icon-linkedin"></use></svg>
+                </a>
+                <a href="https://www.youtube.com/@PremDiaries18" target="_blank" rel="noreferrer" aria-label="YouTube">
+                  <svg class="social-icon" viewBox="0 0 24 24"><use href="#icon-youtube"></use></svg>
+                </a>
+                <a href="https://www.instagram.com/real_prem18/" target="_blank" rel="noreferrer" aria-label="Instagram">
+                  <svg class="social-icon" viewBox="0 0 24 24"><use href="#icon-instagram"></use></svg>
+                </a>
+              </div>
+            </div>
+            <form class="contact-form glass-card reveal" id="contact-form">
+              <label>
+                Name
+                <input type="text" name="name" placeholder="Your name" required>
+              </label>
+              <label>
+                Email
+                <input type="email" name="email" placeholder="your@email.com" required>
+              </label>
+              <label>
+                Subject
+                <input type="text" name="subject" placeholder="Project, role, or collaboration" required>
+              </label>
+              <label>
+                Message
+                <textarea name="message" rows="6" placeholder="Tell me what you're building." required></textarea>
+              </label>
+              <button type="submit" class="btn btn-primary magnetic">Send Message</button>
+              <p class="form-status" id="form-status" hidden></p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>&lt; Made with heart by Priyam Kumar /&gt;</p>
+        <div class="social-row">
+          <a href="https://github.com/Priyam120" target="_blank" rel="noreferrer" aria-label="GitHub">
+            <svg class="social-icon" viewBox="0 0 24 24"><use href="#icon-github"></use></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/priyam-kumar-sharma/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+            <svg class="social-icon" viewBox="0 0 24 24"><use href="#icon-linkedin"></use></svg>
+          </a>
+          <a href="https://www.youtube.com/@PremDiaries18" target="_blank" rel="noreferrer" aria-label="YouTube">
+            <svg class="social-icon" viewBox="0 0 24 24"><use href="#icon-youtube"></use></svg>
+          </a>
+          <a href="https://www.instagram.com/real_prem18/" target="_blank" rel="noreferrer" aria-label="Instagram">
+            <svg class="social-icon" viewBox="0 0 24 24"><use href="#icon-instagram"></use></svg>
+          </a>
+        </div>
+        <span>Copyright © 2026 Priyam Kumar. All rights reserved.</span>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
