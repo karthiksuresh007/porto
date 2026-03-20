@@ -655,6 +655,12 @@ textarea {
   transform: rotateY(180deg);
 }
 
+.photo-back .signature-photo,
+.photo-back .signature-fallback {
+  border: 0;
+  box-shadow: none;
+}
+
 .profile-photo,
 .photo-fallback,
 .signature-photo,
@@ -681,41 +687,17 @@ textarea {
 }
 
 .signature-photo {
-  padding: 2.2rem;
+  padding: 1.1rem;
   object-fit: contain;
   background:
-    radial-gradient(circle at top, rgba(255, 255, 255, 0.08), transparent 48%),
-    linear-gradient(180deg, rgba(20, 20, 20, 0.98), rgba(8, 8, 8, 0.98));
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.03), transparent 44%),
+    linear-gradient(180deg, rgba(14, 14, 14, 0.98), rgba(8, 8, 8, 0.98));
 }
 
 .signature-fallback {
   background:
-    radial-gradient(circle at top, rgba(255, 255, 255, 0.08), transparent 48%),
-    linear-gradient(180deg, rgba(20, 20, 20, 0.98), rgba(8, 8, 8, 0.98));
-}
-
-.photo-frame::after {
-  content: "Hover to reveal signature";
-  position: absolute;
-  left: 50%;
-  bottom: 1rem;
-  z-index: 3;
-  transform: translateX(-50%);
-  padding: 0.42rem 0.72rem;
-  border-radius: 999px;
-  background: rgba(10, 10, 10, 0.62);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  color: rgba(255, 255, 255, 0.78);
-  font-size: 0.72rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  backdrop-filter: blur(12px);
-  transition: opacity 0.25s ease, transform 0.25s ease;
-}
-
-.photo-frame:hover::after {
-  opacity: 0;
-  transform: translateX(-50%) translateY(8px);
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.03), transparent 44%),
+    linear-gradient(180deg, rgba(14, 14, 14, 0.98), rgba(8, 8, 8, 0.98));
 }
 
 .hero-tag-track {
