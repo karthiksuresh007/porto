@@ -601,23 +601,17 @@ textarea {
   position: relative;
   width: min(360px, 100%);
   aspect-ratio: 1;
-  padding: 8px;
+  padding: 0;
   border-radius: 50%;
-  background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(161, 161, 170, 0.04)) border-box,
-    rgba(255, 255, 255, 0.005) padding-box;
-  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.18);
+  background: transparent;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
   overflow: hidden;
   transform-style: preserve-3d;
   perspective: 1400px;
 }
 
 .photo-frame::before {
-  content: "";
-  position: absolute;
-  inset: -40%;
-  background: conic-gradient(from 20deg, transparent 0deg, rgba(255, 255, 255, 0.12) 90deg, transparent 180deg, rgba(161, 161, 170, 0.08) 270deg, transparent 360deg);
-  animation: spin 18s linear infinite;
+  content: none;
 }
 
 .frame-scanline {
@@ -625,7 +619,7 @@ textarea {
   inset: -10% 0 auto 0;
   z-index: 2;
   height: 26%;
-  background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.06), transparent);
+  background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.035), transparent);
   mix-blend-mode: screen;
   animation: scanline 5.5s ease-in-out infinite;
 }
