@@ -310,6 +310,7 @@ contactForm.addEventListener("submit", (event) => {
 });
 
 attachImageFallback("profile-photo", "photo-fallback");
+attachImageFallback("signature-photo", "signature-fallback");
 buildParticles();
 typeLoop();
 window.setInterval(rotateIdentity, 2800);
